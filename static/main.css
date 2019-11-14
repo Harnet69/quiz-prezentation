@@ -121,9 +121,14 @@ footer {
 }
 
 /*Style for sign up page*/
-#user_login, #user_name {
+#username, #nickname {
     width: 150px;
 }
+
+#email, #password{
+    width: 200px;
+}
+
 
 .form-group textarea {
     width: 400px;
