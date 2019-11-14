@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Add the new quiz{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <form action = "/new-quiz" method = "post">
+                            <input class="form-control-file form-control-lg" type="text" placeholder="Quiz title" id = "quiz_title" name = "quiz_title" required>
+                            <input class="btn btn-primary btn-lg active" role="button" aria-pressed="true" type = "submit" value = "Create your quiz">
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    {% endblock %}
